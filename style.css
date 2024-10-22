@@ -48,6 +48,12 @@ a {
 	color: white;
 	font-weight: 500;
 	margin: 0.8rem 0;
+	transition: 0.5s;
+}
+.item_title:hover {
+	font-size: large;
+	font-size: 1.8rem;
+	text-decoration: underline;
 }
 .item_subtitle {
 	font-size: 1.4rem;
@@ -237,3 +243,4 @@ hr {
 		margin: 0 auto;
 	}
 }
+

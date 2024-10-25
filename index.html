@@ -1,190 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/profileImage.png">
-  <title>Resume</title>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Julian's CV | Swisscom</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
+<body data-theme="light" data-lang="en">
+    <div class="logo">
+        <!-- Dark Logo SVG -->
+        <img class="logo-dark SwisscomLogo" src="/images/SwisscomSmallDark.png">
+        <!-- Light Logo SVG -->
+        <img class="logo-light SwisscomLogo" src="/images/SwisscomSmallLight.png">
 
-<body>
-  <div onmouseover="this.style.boxShadow='10px 10px rgba(0, 0, 0, 0.5)';" 
-  onmouseout="this.style.boxShadow='none';" class="container">
-    <div class="profile">
-      <div class="profile_container">
-        <div class="profile_profileImg">
-          <img src="./images/profileImage.png" alt="shaif arfan">
-        </div>
-        <div>
-          <h1 class="profile_name">
-            <span class="profile_name_firstName">Julian</span>
-            <span class="profile_name_lastName">Schwab</span>
-          </h1>
-          <p class="profile_title">Lernender,<br>Informatiker Applikationsentwickler EFZ</p>
-          <p class="description profile_description">
-          Ich bin ein Informatik-Lernender im ersten Lehrjahr und habe grosses Interesse daran, mein Wissen zu erweitern.
-          </p>
-          <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
-        </div>
-      </div>
     </div>
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">Kenntnisse</h3>
-        <ul class="skills_list description">
-          <li>JavaScript</li>
-          <li>UiPath</li>
-          <li>HTML, CSS</li>
-          <li>Java</li>
-        </ul>
-      </div>
-      <div class="ref">
-        <h3 class="title">Referenzen </h3>
-        <div class="ref_item">
-          <h4 class="ref_name">Florian Nelke</h4>
-          <p class="description">Lehrbegleiter, Florian.Nelke@swisscom.com</p>
-        </div>
-      </div>
-
-      <div class="edu">
-        <h3 class="title">Ausbildung</h3>
-        <div class="edu_item">
-          <p class="item_preTitle">Aug. 2024 - Heute</p>
-          <h4 class="item_title">Berufsschule und Berufsmaturitätsschule</h4>
-          <p class="item_subtitle">
-             Winterthur
-          </p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2020 - 2024</p>
-          <h4 class="item_title">Sekundarschule Milchbuck A</h4>
-          <p class="item_subtitle">
-            Zürich 
-          </p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2014-2020</p>
-          <h4 class="item_title">Primarschule Allenmoos</h4>
-          <p class="item_subtitle">
-            Zürich 
-          </p>
-        </div>
-      </div>
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleTheme()">🌓 Theme</button>
+        <button class="toggle-btn" onclick="toggleLanguage()" id="langToggle">
+            <span class="en">🌐 DE</span>
+            <span class="de">🌐 EN</span>
+        </button>
     </div>
-    <div class="group-2">
-      <div class="exp">
-        <h3 class="title">Projekte</h3>
-        <div class="exp_item">
-          <p class="item_preTitle">Sep. 2024 - Heute</p>
-          <h4 class="item_title" ><a href="https://www.swisscom.ch/de/business/enterprise/angebot/platforms-applications/business-process-tranformation/swisscom-automation.html">Automation Consulting</a></h4>
-          <p class="item_subtitle">Robotic process automation</p>
-          <p class=" description">
-          Mit Automation Consulting Prozesse automatisieren und Freiräume schaffen.
-
-          </p>
+    <div id="login-screen">
+        <div class="login-box">
+            <h1 class="en">Welcome</h1>
+            <h1 class="de">Wilkommen</h1>
+            <input class="en" type="text" id="username" placeholder="Username" autocomplete="off">
+            <input class="de" type="text" id="username" placeholder="Benutzername" autocomplete="off">
+            <input class="en" type="password" id="password" placeholder="Password">
+            <input class="de" type="password" id="password" placeholder="Passwort">
+            <button onclick="checkLogin()">Login</button>
         </div>
-        <div class="exp_item">
-          <p class="item_preTitle">Aug. 2024 - Sep. 2024</p>
-          <h4 class="item_title">First Steps</h4>
-          <p class="item_subtitle">Learn the Basics.</p>
-          <p class="description">
-            "First Steps" sind die ersten zwei Einführungswochen bei Swisscom.
-          </p>
-        </div>
-      </div>
-      <div class="lang">
-        <h3 class="title">Sprachkenntnisse</h3>
-        <div class="lang_item">
-          <h4 class="item_title" >Deutsch</h4>
-          <p class="item_subtitle">Muttersprache</p>
-          <div class="beam-container">
-            <div class="beam" style="width: 90%;"></div>
-          </div>
-          <p class="item_preTitle">2010 - Heute</p>
-        </div>
-
-        <div class="lang_item">
-          <h4 class="item_title">Englisch </h4>
-          <p class="item_subtitle">Fliessend</p>
-          <div class="beam-container">
-            <div class="beam" style="width: 70%;"></div>
-          </div>
-          <p class="item_preTitle">2016 - Heute</p>
-        </div>
-
-        <div class="lang_item">
-          <h4 class="item_title">Französisch </h4>
-          <p class="item_subtitle">Grundkenntnisse</p>
-          <div class="beam-container">
-            <div class="beam" style="width: 40%;"></div>
-          </div>
-          <p class="item_preTitle">2019 - Heute</p>
-        </div>
-      </div>
-      
-
-      <div class="interest">
-        <h3 class="title">Interessen</h3>
-        <div class="interest_items">
-          <div class="interest_item">
-            <i data-feather="music"></i>
-            <span>Music</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="users"></i>
-            <span>Freunde</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="map"></i>
-            <span>Travel</span>
-          </div>
-        </div>
-
-      </div>
     </div>
-    <hr>
-    <div class="group-3">
-      <div class="contact">
-        <h3 class="title">Kontak</h3>
-        <div class="contact_info">
-          <p class="description">
-            Zürich, Schweiz
-          </p>
-          <p class="description">
-            Arbeit: +41 58 223 92 31 <br>
-            Privat: +41 77 460 46 59
-          </p>
-          <p class="description">
-            Arbeit: julian.schwab@swisscom.com <br>
-            Privat: jla.schwab@gmail.com
-          </p>
+
+    <div id="cv-content">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="/images/profileImage.png" class="JulianImg">
+            </div>
+            <div>
+                <h1 class="en">Julian Schwab</h1>
+                <h1 class="de">Julian Schwab</h1>
+                <p class="en">Apprentice Software Developer EFZ</p>
+                <p class="de">Lernender Informatiker Applikationetwickler EFZ</p>
+            </div>
         </div>
-      </div>
-      <div class="social">
-        <h3 class="title">Medine</h3>
-        <div class="social_items">
-          <a href="https://github.com/JulianSchwabCommits/" target="_b" class="social_item">
-            <i data-feather="github"></i>
-            <span>/JulianSchwabCommits</span>
-          </a>
-          <a href="https://www.instagram.com/jla.schwab/" target="_blank" class="social_item">
-            <i data-feather="instagram"></i>
-            <span>/jla.schwab</span>
-          </a>
-          <a href="https://www.linkedin.com/in/julian-schwab-680349263/" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
-            <span>/julian schwab</span>
-          </a>
+        
+        <div class="section">
+            <h2 class="en">Programming Skills</h2>
+            <h2 class="de">Programmier-Kenntnisse</h2>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+            </div>
+            <p>JavaScript</p>
+            
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+            </div>
+            <p>HTML/CSS</p>
+            
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 82%"></div>
+            </div>
+            <p>Python</p>
         </div>
-      </div>
+
+        <div class="section">
+            <h2 class="en">Projects</h2>
+            <h2 class="de">Projekte</h2>
+            <h3 class="en">Intern Projects at Swisscom</h3>
+            <h3 class="de">Praktikumsprojekte bei Swisscom</h3>
+            <div class="en">
+                <p>Project 1 Description</p>
+                <p>Project 2 Description</p>
+            </div>
+            <div class="de">
+                <p>Projekt 1 Beschreibung</p>
+                <p>Projekt 2 Beschreibung</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="en">Education</h2>
+            <h2 class="de">Ausbildung</h2>
+            <div class="en">
+                <p>Your School Information Here</p>
+            </div>
+            <div class="de">
+                <p>Ihre Schulinformationen hier</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="en">Contact</h2>
+            <h2 class="de">Kontakt</h2>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <script>
-    feather.replace()
-  </script>
 </body>
+</html>

@@ -1,18 +1,3 @@
-function checkLogin() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    
-    if (username === '123' && password === '123') {
-        document.getElementById('login-screen').style.display = 'none';
-        document.getElementById('cv-content').style.display = 'block';
-        animateSkillBars();
-    } else {
-        alert(document.body.getAttribute('data-lang') === 'en' ? 
-            'Invalid credentials. Please try again.' : 
-            'Ungültige Anmeldedaten. Bitte versuchen Sie es erneut.');
-    }
-}
-
 function toggleTheme() {
     const body = document.body;
     const currentTheme = body.getAttribute('data-theme');

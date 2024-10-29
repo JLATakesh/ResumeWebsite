@@ -1,4 +1,6 @@
 # ResumeWebsite
+Resume Website with HTML, CSS  and Javascript.
+
 Resume Website for mostly intern applications using swisscom design
 
 /design

@@ -1,52 +1,39 @@
 .body {
     background-color: #eef3f6;
     color: #333333;
-
-    display: flex;
-    justify-content: flex-end;
 }
 
 
-@media (max-width: 425px) {
-    .nav-container {
-        border: 2px solid green;
-        position: fixed; /* Make it fixed */
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
 
-    }
-    .nav-box {
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
+.nav-container {
+    padding: 10px;
+    border: 2px solid green;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
-        border: 2px solid red;
-    }
-    .nav-link {
-        border: 2px solid red;  
-        
-    }
 }
-@media (min-width: 424px) {
-    .nav-container {
-        position: fixed; /* Make it fixed */
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        border: 2px solid green;
-        
+.nav-box {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 5rem;
+    border: 2px solid red;
+}
+.nav-link  {
+    text-decoration: none;
+    color: #333;
+    border: 2px solid red; 
+    padding: 0.1rem; 
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 5rem;
 
-    }
-    .nav-box {
-        border: 2px solid red;
-        max-width: fit-content;
-        margin: 10px;
-    }
-    .nav-link {
-        border: 2px solid red;  
-        
-    }
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+    
 }

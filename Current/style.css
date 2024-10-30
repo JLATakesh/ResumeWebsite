@@ -1,13 +1,52 @@
 .body {
     background-color: #eef3f6;
     color: #333333;
-}
-.nav-container {
-ope
-}
-.nav-box {
 
+    display: flex;
+    justify-content: flex-end;
 }
-.nav-link {
 
+
+@media (max-width: 425px) {
+    .nav-container {
+        border: 2px solid green;
+        position: fixed; /* Make it fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+    }
+    .nav-box {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        border: 2px solid red;
+    }
+    .nav-link {
+        border: 2px solid red;  
+        
+    }
+}
+@media (min-width: 424px) {
+    .nav-container {
+        position: fixed; /* Make it fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border: 2px solid green;
+        
+
+    }
+    .nav-box {
+        border: 2px solid red;
+        max-width: fit-content;
+        margin: 10px;
+    }
+    .nav-link {
+        border: 2px solid red;  
+        
+    }
 }

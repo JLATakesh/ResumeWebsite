@@ -70,3 +70,11 @@ body {
 .two {
     margin-top: 0rem;
 }
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red   
+}
+.div-container {
+    border: 2px solid green;
+}

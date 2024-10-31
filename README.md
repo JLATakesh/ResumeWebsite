@@ -19,3 +19,10 @@ design inspo: https://augmenary.com/interview/6711ff0c5c36af364281fcce
         make it interactive with hoverable buttons usw.
     -4
         add js function that show of my js skills.
+
+
+/name git branches
+
+feature/"featureName" | feature/add-header
+bugfix/"NameOfFix" | bugfix/stickyheader
+stable/"version name | stabel/v1

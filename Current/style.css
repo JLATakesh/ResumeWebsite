@@ -1,6 +1,7 @@
-.body {
+body {
     background-color: #eef3f6;
     color: #333333;
+    padding: 2rem;
 }
 
 
@@ -36,4 +37,45 @@
     font-size: 1.1rem;
     transition: opacity 0.3s;
     
+}
+
+
+
+@media (max-width: 650) {
+
+    .hero-container {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+    }
+    
+    .hero-title {
+
+        font-size: 4rem;
+        margin-bottom: 0.1rem;
+    }
+    .hero-para {
+        font-size: 2rem;   
+    }
+
+}
+@media (min-width: 650) {
+
+    .hero-container {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+    }
+    
+    .hero-title {
+
+        font-size: 4rem;
+        margin-bottom: 0.1rem;
+    }
+    .hero-para {
+        font-size: 2rem;    
+    }
+
 }

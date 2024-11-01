@@ -12,7 +12,7 @@ body {
 
 
 .nav-container {
-    padding: 10px;
+    padding: 2px;
     border: 2px solid green;
     position: fixed; 
     top: 0;
@@ -70,11 +70,40 @@ body {
 .two {
     margin-top: 0rem;
 }
-.box {
-    width: 100px;
-    height: 100px;
-    border: 2px solid red   
-}
-.div-container {
-    border: 2px solid green;
-}
+
+
+.parent {
+    display: grid;
+    border: 2px solid red;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto; 
+    }
+
+    .parent > div {
+        border: 2px solid green;
+        min-height: 1fr;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 5 / 5; }
+    .div2 { grid-area: 1 / 6 / 5 / 13; }
+    .div3 { grid-area: 6 / 9 / 10 / 13; }
+    .div4 { grid-area: 6 / 1 / 10 / 8; }
+
+    @media screen and (max-width: 758px) {
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-column-gap: 1px;
+            grid-row-gap: 1rem;
+        }
+
+        .div1, .div2, .div3, .div4 {
+            grid-area: auto;
+        }
+    }

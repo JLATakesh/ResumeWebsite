@@ -113,3 +113,11 @@ body {
         margin-right: auto;
         max-width: fit-content;
     }
+
+    .progress-title {
+        font-family: "oi", sans-serif;
+        font-weight: 400;
+        font-style: normal; 
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }

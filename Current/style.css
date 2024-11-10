@@ -51,7 +51,6 @@ body {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .hero-title {
@@ -120,4 +119,90 @@ body {
         font-style: normal; 
         font-size: 3rem;
         margin-bottom: 5rem;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .nav-tabs li {
+        position: relative;
+    }
+
+    .tab {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .tab:hover {
+        color: #00ff9d;
+    }
+
+    .tab.active {
+        color: #00ff9d;
+    }
+
+    .tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: red;
+        animation: slideIn 0.3s ease-in-out;
+    }
+
+    .content {
+        padding: 20px;
+        text-align: center;
+        display: none;
+    }
+
+    .content.active {
+        display: block;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: scaleX(0);
+        }
+        to {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .nav-tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tab {
+            padding: 8px 16px;
+        }
     }

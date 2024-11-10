@@ -15,17 +15,18 @@
         <!-- Nav-->
     <div class="nav-container">
         <div class="nav-box">
-            <a href="#">
-                <a class="nav-link active" onclick="SwitchTab(0)" href="work">Work</a>
-                <a class="nav-link" onclick="SwitchTab(1)" href="about">About</a>
-                <a class="nav-link" onclick="SwitchTab(2)"href="play">Play</a>
-                <a class="nav-link" onclick="SwitchTab(3)"href="contact">Contact</a>
+            <a>
+                <a class="nav-link active" data-tab="work">Work</a>
+                <a class="nav-link" data-tab="about">About</a>
+                <a class="nav-link" data-tab="play">Play</a>
+                <a class="nav-link" data-tab="contact">Contact</a>
             </a>
         </div>
     </div>
 
-    <!-- Hero-->
-    <div class="wo">
+
+    <div id="work" class="  content active">
+
         <div class="hero-container">
             <h1 class="hero-title one">Hi. I'm Julian.
             <h1 class="hero-title two">A Coder.</h1>
@@ -112,6 +113,15 @@
                 <p>Get in touch with us.</p>
             </div>
         </div>
+    </div>
+    <div id="About" class="content">
+        <h1>This is the about section</h1>
+    </div>
+    <div id="Play" class="content">
+        <h1>This is the Play section</h1>
+    </div>
+    <div id="Contact" class="content">
+        <h1>This is the Contact section</h1>
     </div>
 
 </body>

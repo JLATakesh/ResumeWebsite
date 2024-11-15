@@ -1,23 +1,32 @@
 :root {
-    --primary-light: #fff;
+    /* Light theme */
+    --primary-light: #ffffff;
     --secondary-light: #f5f7fa;
     --text-light: #2c3e50;
     --accent-light: #ff0000;
-    --shadow-light: rgba(107, 0, 0, 0.14);
+    --shadow-light: rgba(107, 0, 0, 0.144);
 
+    /* Dark theme */
     --primary-dark: #1a202c;
     --secondary-dark: #2d3748;
     --text-dark: #e2e8f0;
     --accent-dark: #ff3333;
-    --shadow-dark: rgba(92, 1, 1, 0.25);
+    --shadow-dark: rgba(92, 1, 1, 0.253);
 }
-[data-theme="light"],
-[data-theme="dark"] {
+[data-theme="light"] {
     --primary: var(--primary-light);
     --secondary: var(--secondary-light);
     --text: var(--text-light);
     --accent: var(--accent-light);
     --shadow: var(--shadow-light);
+}
+
+[data-theme="dark"] {
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --text: var(--text-dark);
+    --accent: var(--accent-dark);
+    --shadow: var(--shadow-dark);
 }
 	
 * {
@@ -29,11 +38,9 @@
 }
 	
 body {
-    background: var(--primary);
+    background-color: var(--primary);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    transition: 0.3s;
 }
 	
 .toggle-container {
@@ -45,20 +52,20 @@ body {
 	z-index: 1000;
 }
 	
-button, .toggle-btn {
-    background: var(--secondary);
-    color: var(--text);
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
+.toggle-btn {
+	background: var(--secondary);
+	color: var(--text);
+	border: 1px solid var(--accent);
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: var(--accent);
-    color: #fff;
-}	
+.toggle-btn:hover {
+	background: var(--accent);
+	color: white;
+}
 
 .Name{
 	font-style: normal;
@@ -181,7 +188,7 @@ button:hover {
 	align-items: center;
 	gap: 2rem;
 	margin-bottom: 3rem;
-	margin-left: 3rem;
+	margin-left: 4rem;
 }
 
 .profile-image {
@@ -199,6 +206,7 @@ button:hover {
 	border-radius: 8px;
 	box-shadow: 0 4px 6px var(--shadow);
 }
+
 
 .skill-bar {
 	background: var(--primary);

@@ -23,3 +23,13 @@ function animateSkillBars() {
         }, 100);
     });
 }
+function toggleAttribute(attribute, options) {
+    const body = document.body;
+    const current = body.getAttribute(attribute);
+    const next = options.find(option => option !== current);
+    body.setAttribute(attribute, next);
+
+    if (attribute === 'data-lang') {
+        document.getElementById('langDisplay').textContent = next === 'en' ? 'DE' : 'EN';
+    }
+}

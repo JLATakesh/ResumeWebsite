@@ -1,34 +1,65 @@
 :root {
-	/* Light theme */
-	--primary-light: #ffffff;
-	--secondary-light: #f5f7fa;
-	--text-light: #2c3e50;
-	--accent-light: #ff0000;
-	--shadow-light: rgba(107, 0, 0, 0.144);
+    --primary-light: #fff;
+    --secondary-light: #f5f7fa;
+    --text-light: #2c3e50;
+    --accent-light: #ff0000;
+    --shadow-light: rgba(107, 0, 0, 0.14);
 
-	/* Dark theme */
-	--primary-dark: #1a202c;
-	--secondary-dark: #2d3748;
-	--text-dark: #e2e8f0;
-	--accent-dark: #ff3333;
-	--shadow-dark: rgba(92, 1, 1, 0.253);
+    --primary-dark: #1a202c;
+    --secondary-dark: #2d3748;
+    --text-dark: #e2e8f0;
+    --accent-dark: #ff3333;
+    --shadow-dark: rgba(92, 1, 1, 0.25);
 }
-
-[data-theme="light"] {
-	--primary: var(--primary-light);
-	--secondary: var(--secondary-light);
-	--text: var(--text-light);
-	--accent: var(--accent-light);
-	--shadow: var(--shadow-light);
-}
-
+[data-theme="light"],
 [data-theme="dark"] {
-	--primary: var(--primary-dark);
-	--secondary: var(--secondary-dark);
-	--text: var(--text-dark);
-	--accent: var(--accent-dark);
-	--shadow: var(--shadow-dark);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --text: var(--text-light);
+    --accent: var(--accent-light);
+    --shadow: var(--shadow-light);
 }
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+	
+body {
+    background: var(--primary);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+	
+.toggle-container {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	display: flex;
+	gap: 1rem;
+	z-index: 1000;
+}
+	
+button, .toggle-btn {
+    background: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent);
+    color: #fff;
+}	
+
 .Name{
 	font-style: normal;
 	font-optical-sizing: auto;
@@ -45,19 +76,7 @@
 	font-weight: 200;
 	font-style: normal;
 }
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Inter', -apple-system, sans-serif;
-	transition: background-color 0.3s, color 0.3s;
-}
 
-body {
-	background-color: var(--primary);
-	color: var(--text);
-	line-height: 1.6;
-}
 
 .toggle-container {
 	position: fixed;
@@ -162,6 +181,7 @@ button:hover {
 	align-items: center;
 	gap: 2rem;
 	margin-bottom: 3rem;
+	margin-left: 3rem;
 }
 
 .profile-image {

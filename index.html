@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Julian's CV | Swisscom</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light" data-lang="en">
+    <div class="logo">
+        <img class="logo-dark SwisscomLogo" src="/images/Images-logos/Dark/SwisscomSmallDark.png" alt="Swisscom Logo Dark">
+        <img class="logo-light SwisscomLogo" src="/images/Images-logos/Light/SwisscomSmallLight.png" alt="Swisscom Logo Light">
+    </div>
+
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleTheme()">🌓 Theme</button>
+        <button class="toggle-btn" onclick="toggleLanguage()" id="langToggle">
+            🌐 <span id="langDisplay">DE</span>
+        </button>
+    </div>
+    
+
+    <div id="cv-content">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="/images/Images-me/profileImage.png" class="JulianImg" alt="Julian Schwab">
+            </div>
+            <div>
+                <h1 class="Name"><b class="First">Julian</b> Schwab</h1>
+                <p class="Text en">Apprentice Software Developer EFZ</p>
+                <p class="Text de">Lernender Informatiker Applikationetwickler EFZ</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="en CodingTitle">Programming Skills</h2>
+            <h2 class="de CodingTitle">Programmier-Kenntnisse</h2>
+
+            <div class="skills">
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>HTML/CSS</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Python</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Java</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 45%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>React</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 12%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="en">Projects at Swisscom</h2>
+            <h2 class="de">Projekte bei Swisscom</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <h2 class="education-title">Automation Consulting</h2>
+                    <p class="education-duration">I developed automations using UiPath and gained solid knowledge in Git.</p>
+                </li>
+                <li class="timeline-item">
+                    <h2 class="education-title">Automation Team</h2>
+                    <p class="education-duration">Ich habe Automationen mit UiPath entwickelt und fundierte Kenntnisse in Git erworben.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="en">Education</h2>
+            <h2 class="de">Ausbildung</h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <h2 class="education-title">Secondary School Milchbuck A, Zurich</h2>
+                    <p class="education-duration">3 years</p>
+                </li>
+                <li class="timeline-item">
+                    <h2 class="education-title">Primary School Allenmoos, Zurich</h2>
+                    <p class="education-duration">6 years</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section social-container">
+            <div class="social-section">
+                <a href="https://github.com/JulianSchwabCommits" target="_blank">
+                    <img class="MediaImages" src="/images/Images-logos/Dark/github-dark.png" alt="GitHub">
+                    <img class="MediaImages" src="/images/Images-logos/Light/github-light.png" alt="GitHub">
+                </a>
+                <p>GitHub</p>
+            </div>
+            <div class="social-section">
+                <a href="https://www.linkedin.com/in/julian-schwab-680349263/" target="_blank">
+                    <img class="MediaImages" src="/images/Images-logos/Dark/linkedin-dark.png" alt="LinkedIn">
+                    <img class="MediaImages" src="/images/Images-logos/Light/linkedin-light.png" alt="LinkedIn">
+                </a>
+                <p>LinkedIn</p>
+            </div>
+            <div class="social-section">
+                <a href="https://intranet.swisscom.com/home/profile/i:0e.t%7Cazuread%7Ctaascjun" target="_blank">
+                    <img class="MediaImages" src="/images/Images-logos/Dark/SwisscomSmallDark.png" alt="Swisscom Intranet">
+                    <img class="MediaImages" src="/images/Images-logos/Light/SwisscomSmallLight.png" alt="Swisscom Intranet">
+                </a>
+                <p>Intranet</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -337,3 +337,28 @@ h1, h2, h3 {
 	color: pink;
 	color: var(--text);
 }
+
+/* Fügen Sie diese CSS-Regeln für die Social-Section hinzu */
+.social-section img {
+    width: 3.5rem;
+}
+
+[data-theme="light"] .social-section img[src*="Light"],
+[data-theme="light"] .logo-light {
+    display: none;
+}
+
+[data-theme="light"] .social-section img[src*="Dark"],
+[data-theme="light"] .logo-dark {
+    display: block;
+}
+
+[data-theme="dark"] .social-section img[src*="Dark"],
+[data-theme="dark"] .logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .social-section img[src*="Light"],
+[data-theme="dark"] .logo-light {
+    display: block;
+}

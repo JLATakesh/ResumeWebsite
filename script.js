@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (prefersDarkScheme.matches) {
+        document.body.setAttribute('data-theme', 'dark');
+    }
+    
+    animateSkillBars();
+});
+
 function toggleTheme() {
     const body = document.body;
     const currentTheme = body.getAttribute('data-theme');
